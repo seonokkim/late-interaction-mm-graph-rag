@@ -1,4 +1,4 @@
-# late-interaction-mm-graph-rag
+# Multimodal GraphRAG with Late-Interaction Evidence Retrieval 
 
 **Multimodal GraphRAG with Late-Interaction Evidence Retrieval** builds a **multimodal graph**—nodes and edges over text, tables, and images—grounded in **late-interaction** (**multi-vector / MaxSim-style**) relevance scoring for evidence selection. Pattern-guided extraction populates the graph; **construct** materializes it (e.g. GraphML), and **inference** produces answers by reasoning over that structure. Experiments use **MultiModalQA**; the end-to-end procedure is `pattern` → `extraction` → `construct` → `inference`.
 
