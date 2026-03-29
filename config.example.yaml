@@ -1,0 +1,27 @@
+# Copy to `config.yaml` in the repo root (git-ignored). Never commit secrets.
+
+project:
+  name: late-interaction-mm-graph-rag
+
+paths:
+  data_root: ./data
+  result_root: ./result
+  # MultiModalQA JSONL files expected under: data/multimodalqa/dataset/
+  # (MMQA_dev.jsonl, MMQA_tables.jsonl, MMQA_images.jsonl, MMQA_texts.jsonl — names used by this codebase).
+  # Override with env: MMQA_DATASET_DIR, MMQA_IMAGES_DIR, MMQA_EMBEDDING_DIR, MMQA_IMAGE_DESCRIPTION_DIR
+
+models:
+  # Replace with your ColEmbed / Nemotron or other encoder IDs and local paths.
+  embedding_model_id: REPLACE_ME
+  llm_model_id: REPLACE_ME
+
+retrieval:
+  top_k: 10
+  # Late-interaction / MaxSim-style hyperparameters belong here.
+
+vector_store:
+  backend: chromadb
+  persist_directory: ./data/chroma
+
+graph:
+  export_format: graphml
