@@ -2,8 +2,6 @@
 
 **Multimodal GraphRAG with Late-Interaction Evidence Retrieval** builds a **multimodal graph**—nodes and edges over text, tables, and images—grounded in **late-interaction** (**multi-vector / MaxSim-style**) relevance scoring for evidence selection. Pattern-guided extraction populates the graph; **construct** materializes it (e.g. GraphML), and **inference** produces answers by reasoning over that structure. Experiments use **MultiModalQA**; the end-to-end procedure is `pattern` → `extraction` → `construct` → `inference`.
 
-**Paper:** [LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval](https://arxiv.org/abs/2603.26683) (arXiv:2603.26683).
-
 ## Dependencies
 
 Install packages listed in `requirements.txt`. A local copy of `config.example.yaml` can be used as a template for experiment settings.
